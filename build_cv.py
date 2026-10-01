@@ -22,8 +22,16 @@ OUT = "/home/user/portfolio/cv"
 # ============================================================================
 NAME = "AESEN A. CHAVEZ"
 TAGLINE = "Aviation Maintenance Trainee  |  Maintenance Data & Compliance Automation"
-CONTACT = "Muntinlupa City, Metro Manila  |  +63 947 245 0023  |  aesenchavez18@gmail.com"
-LINKS = "linkedin.com/in/aesen-chavez-870b26343  |  aeseeen.github.io"
+CONTACT = [
+    ("Muntinlupa City, Metro Manila", None),
+    ("+63 947 245 0023", "tel:+639472450023"),
+    ("aesenchavez18@gmail.com", "mailto:aesenchavez18@gmail.com"),
+]
+LINKS = [
+    ("linkedin.com/in/aesen-chavez-870b26343",
+     "https://www.linkedin.com/in/aesen-chavez-870b26343/"),
+    ("aeseeen.github.io", "https://aeseeen.github.io"),
+]
 
 SUMMARY = (
     "BS Aviation Engineering Technology student with 420 supervised helicopter maintenance hours under "
@@ -152,6 +160,32 @@ def build_docx():
             r.font.color.rgb = RGBColor(*color)
         return r
 
+    def add_hyperlink(p, url, text, size=S_BODY, color="1F3864"):
+        """Real clickable hyperlink in DOCX (not just blue text)."""
+        r_id = p.part.relate_to(
+            url,
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+            is_external=True)
+        h = OxmlElement("w:hyperlink")
+        h.set(qn("r:id"), r_id)
+        r = OxmlElement("w:r")
+        rPr = OxmlElement("w:rPr")
+        rf = OxmlElement("w:rFonts")
+        rf.set(qn("w:ascii"), FONT)
+        rf.set(qn("w:hAnsi"), FONT)
+        rPr.append(rf)
+        c = OxmlElement("w:color"); c.set(qn("w:val"), color); rPr.append(c)
+        sz = OxmlElement("w:sz"); sz.set(qn("w:val"), str(int(size * 2))); rPr.append(sz)
+        u = OxmlElement("w:u"); u.set(qn("w:val"), "single"); rPr.append(u)
+        r.append(rPr)
+        t = OxmlElement("w:t")
+        t.text = text
+        t.set(qn("xml:space"), "preserve")
+        r.append(t)
+        h.append(r)
+        p._p.append(h)
+        return h
+
     def rule(p):
         pPr = p._p.get_or_add_pPr()
         pbdr = OxmlElement("w:pBdr")
@@ -174,9 +208,18 @@ def build_docx():
     p = newp(line_pt=S_TAG + 2)
     put(p, TAGLINE, size=S_TAG, color=GREY)
     p = newp(line_pt=S_CONTACT + 2)
-    put(p, CONTACT, size=S_CONTACT)
+    for i, (txt, url) in enumerate(CONTACT):
+        if i:
+            put(p, "  |  ", size=S_CONTACT, color=(0x88, 0x88, 0x88))
+        if url:
+            add_hyperlink(p, url, txt, size=S_CONTACT, color="1F3864")
+        else:
+            put(p, txt, size=S_CONTACT)
     p = newp(line_pt=S_CONTACT + 2.6, after=1)
-    put(p, LINKS, size=S_CONTACT, color=NAVY)
+    for i, (txt, url) in enumerate(LINKS):
+        if i:
+            put(p, "  |  ", size=S_CONTACT, color=(0x88, 0x88, 0x88))
+        add_hyperlink(p, url, txt, size=S_CONTACT, color="1F3864")
 
     # ---- summary
     heading("PROFESSIONAL SUMMARY")
@@ -259,11 +302,22 @@ def build_pdf():
             bulletOffsetY=-1.2, start="\u2022",
             leftIndent=9, spaceBefore=0.6, spaceAfter=0)
 
+    def pretty(seq, color):
+        out = []
+        for i, (txt, url) in enumerate(seq):
+            if i:
+                out.append(' &nbsp;|&nbsp; ')
+            if url:
+                out.append(f'<a href="{url}" color="{color}"><u>{esc(txt)}</u></a>')
+            else:
+                out.append(esc(txt))
+        return "".join(out)
+
     story = [
         Paragraph(esc(NAME), name_st),
         Paragraph(esc(TAGLINE), tag_st),
-        Paragraph(esc(CONTACT), con_st),
-        Paragraph(f'<font color="#1F3864">{esc(LINKS)}</font>', con_st),
+        Paragraph(pretty(CONTACT, "#1A1A1A"), con_st),
+        Paragraph(pretty(LINKS, "#1F3864"), con_st),
         Spacer(1, 5),
         Paragraph("PROFESSIONAL SUMMARY", h_st),
         rule(),
