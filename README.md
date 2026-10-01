@@ -2,7 +2,7 @@
 
 Personal portfolio site: aviation maintenance background + self-hosted systems automation.
 
-**Live:** [YOUR-PORTFOLIO-URL]
+**Live:** https://Aeseeen.github.io
 
 ---
 
