@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aesen A. Chavez — Aviation Maintenance &amp; Compliance Automation</title>
+
+<meta name="description" content="Aviation Engineering Technology student with 420 supervised helicopter maintenance hours under the Philippine Air Force. I build self-hosted systems that keep maintenance and operational records accurate, auditable, and on schedule.">
+<meta name="author" content="Aesen A. Chavez">
+<meta name="theme-color" content="#0d1b2a">
+
+<!-- Open Graph: controls how this link previews on LinkedIn, Facebook, Messenger -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Aesen A. Chavez — Aviation Maintenance &amp; Compliance Automation">
+<meta property="og:description" content="420 supervised helicopter maintenance hours under the Philippine Air Force. Self-hosted automation for maintenance records, due-date alerting, and audit trails.">
+<meta property="og:url" content="[YOUR-PORTFOLIO-URL]">
+<meta property="og:site_name" content="Aesen A. Chavez">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aesen A. Chavez — Aviation Maintenance &amp; Compliance Automation">
+<meta name="twitter:description" content="420 supervised helicopter maintenance hours. Self-hosted automation for maintenance records and compliance.">
+
+<!-- Favicon: inline SVG, so no extra file and no 404 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='16' font-weight='bold' fill='%23d97b21' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0d1b2a;
+    --navy-2:#132b45;
+    --slate:#1b3a57;
+    --ink:#12212f;
+    --body:#3d5167;
+    --muted:#7b8fa3;
+    --line:#e2e8ee;
+    --paper:#ffffff;
+    --wash:#f6f8fa;
+    --amber:#d97b21;
+    --amber-soft:#fdf3e7;
+    --sky:#2f80c8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--body); background:var(--paper);
+    line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,h4{color:var(--ink);line-height:1.25;font-weight:700}
+  a{color:var(--sky);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(155deg,var(--navy) 0%,var(--navy-2) 55%,var(--slate) 100%);
+    color:#fff; padding:64px 0 56px; position:relative; overflow:hidden;
+  }
+  .hero:before{
+    content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;
+    border-radius:50%;background:radial-gradient(circle,rgba(217,123,33,.22),transparent 68%);
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:#f0b26b;border:1px solid rgba(240,178,107,.42);
+    padding:5px 12px;border-radius:999px;margin-bottom:22px;
+  }
+  .hero h1{color:#fff;font-size:2.65rem;letter-spacing:-.02em;margin-bottom:12px}
+  .hero .lede{font-size:1.13rem;color:#c6d5e5;max-width:640px;margin-bottom:26px}
+  .hero .lede strong{color:#fff;font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:30px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:11px 19px;border-radius:7px;
+    font-size:14.5px;font-weight:600;transition:.16s;
+  }
+  .btn-p{background:var(--amber);color:#fff}
+  .btn-p:hover{background:#c26c17;text-decoration:none}
+  .btn-s{border:1px solid rgba(255,255,255,.3);color:#e6eef7}
+  .btn-s:hover{background:rgba(255,255,255,.09);text-decoration:none}
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:8px 26px;padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.14);font-size:13.5px;color:#9fb4c9;
+  }
+  .hero-meta span{display:flex;align-items:center;gap:7px}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex:none}
+
+  /* ---------- STATS ---------- */
+  .stats{background:var(--wash);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0}
+  .stat{padding:26px 22px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-size:1.85rem;color:var(--navy);line-height:1.1;letter-spacing:-.02em}
+  .stat span{font-size:12.5px;color:var(--muted);display:block;margin-top:5px;line-height:1.4}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:58px 0}
+  .sec-head{margin-bottom:30px}
+  .sec-num{
+    font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--amber);
+    text-transform:uppercase;display:block;margin-bottom:8px;
+  }
+  .sec-head h2{font-size:1.72rem;letter-spacing:-.015em;margin-bottom:9px}
+  .sec-head p{color:var(--muted);max-width:640px;font-size:15px}
+
+  /* ---------- BRIDGE ---------- */
+  .bridge{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch}
+  .bridge-col{border:1px solid var(--line);border-radius:10px;padding:26px;background:#fff}
+  .bridge-col h3{font-size:1.03rem;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+  .bridge-col .sub{font-size:12.5px;color:var(--muted);margin-bottom:16px}
+  .bridge-col ul{list-style:none;font-size:14.3px}
+  .bridge-col li{padding-left:19px;position:relative;margin-bottom:9px;line-height:1.55}
+  .bridge-col li:before{
+    content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;
+    border-radius:50%;background:var(--amber);
+  }
+  .bridge-col li:last-child{margin-bottom:0}
+  .bridge-mid{
+    display:flex;align-items:center;justify-content:center;width:64px;
+  }
+  .bridge-mid span{
+    width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;
+  }
+
+  /* ---------- PROJECT CARDS ---------- */
+  .card{
+    border:1px solid var(--line);border-radius:11px;padding:28px;margin-bottom:20px;
+    background:#fff;transition:.18s;
+  }
+  .card:hover{border-color:#c9d6e2;box-shadow:0 6px 22px -12px rgba(13,27,42,.22)}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+  .card h3{font-size:1.15rem;letter-spacing:-.01em}
+  .card .when{font-size:13px;color:var(--muted);white-space:nowrap;padding-top:4px}
+  .card .desc{font-size:14.6px;margin:12px 0 16px}
+  .tag{
+    display:inline-block;font-size:11.5px;font-weight:600;padding:3.5px 10px;border-radius:999px;
+    background:var(--amber-soft);color:#a85c12;margin:0 6px 6px 0;letter-spacing:.01em;
+  }
+  .tag-tech{background:#eef4fa;color:#25639c}
+  .tag-dev{background:#f0eefb;color:#5b4bc4}
+  .bullets{list-style:none;font-size:14.4px;margin-top:14px}
+  .bullets li{padding-left:20px;position:relative;margin-bottom:9px;line-height:1.56}
+  .bullets li:before{
+    content:"";position:absolute;left:3px;top:8.5px;width:5px;height:5px;border-radius:50%;
+    background:var(--sky);
+  }
+  .shots{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+  }
+  .shot{
+    border:1.5px dashed #cfdae4;border-radius:8px;height:118px;background:var(--wash);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-size:12.3px;color:var(--muted);padding:14px;line-height:1.45;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .tl{position:relative;padding-left:30px}
+  .tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;margin-bottom:26px}
+  .tl-item:last-child{margin-bottom:0}
+  .tl-item:before{
+    content:"";position:absolute;left:-29px;top:6px;width:16px;height:16px;border-radius:50%;
+    background:#fff;border:3px solid var(--amber);
+  }
+  .tl-item.done:before{background:var(--amber)}
+  .tl-when{font-size:12.5px;font-weight:700;color:var(--amber);letter-spacing:.04em;text-transform:uppercase}
+  .tl-item h4{font-size:1.02rem;margin:3px 0 4px}
+  .tl-item p{font-size:14.3px}
+
+  /* ---------- SKILLS ---------- */
+  .sk-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .sk-col{border:1px solid var(--line);border-radius:10px;padding:24px;background:#fff}
+  .sk-col h3{font-size:.98rem;margin-bottom:16px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+  .sk-row{margin-bottom:15px}
+  .sk-row:last-child{margin-bottom:0}
+  .sk-row b{display:block;font-size:12.5px;color:var(--ink);font-weight:700;margin-bottom:3px}
+  .sk-row span{font-size:14.2px;line-height:1.5;color:var(--body)}
+
+  /* ---------- ROADMAP ---------- */
+  .rm{display:grid;gap:11px}
+  .rm-row{
+    display:grid;grid-template-columns:132px 1fr auto;gap:16px;align-items:center;
+    border:1px solid var(--line);border-radius:9px;padding:15px 20px;background:#fff;
+  }
+  .rm-row .when{font-size:13px;font-weight:700;color:var(--navy)}
+  .rm-row .what{font-size:14.4px}
+  .rm-row .what small{display:block;color:var(--muted);font-size:12.6px;margin-top:2px}
+  .pill{
+    font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 11px;border-radius:999px;white-space:nowrap;
+  }
+  .pill-free{background:#e7f6ec;color:#1c7c43}
+  .pill-paid{background:var(--amber-soft);color:#a85c12}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--navy);color:#c6d5e5;padding:56px 0}
+  .contact h2{color:#fff;font-size:1.72rem;margin-bottom:11px;letter-spacing:-.015em}
+  .contact p{max-width:560px;margin-bottom:26px;font-size:15px}
+  .clist{display:flex;flex-wrap:wrap;gap:12px}
+  .clink{
+    display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:8px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+    color:#e6eef7;font-size:14.5px;font-weight:600;transition:.16s;
+  }
+  .clink:hover{background:rgba(255,255,255,.14);text-decoration:none}
+  .clink svg{flex:none;opacity:.85}
+
+  footer{background:#08131f;padding:22px 0;font-size:13px;color:#6d8399}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .note{
+    background:var(--wash);border-left:3px solid var(--amber);padding:13px 17px;
+    font-size:13.6px;border-radius:0 6px 6px 0;color:var(--body);margin-top:18px;
+  }
+  .note b{color:var(--ink)}
+
+  @media(max-width:760px){
+    .hero h1{font-size:2rem}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .stat{border-bottom:1px solid var(--line)}
+    .stat:nth-child(2){border-right:none}
+    .bridge{grid-template-columns:1fr;gap:14px}
+    .bridge-mid{width:100%;height:34px}
+    .bridge-mid span{transform:rotate(90deg)}
+    .sk-grid{grid-template-columns:1fr}
+    .shots{grid-template-columns:1fr}
+    .rm-row{grid-template-columns:1fr;gap:7px;text-align:left}
+    section{padding:44px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Aviation &times; Automation</span>
+    <h1>Aesen A. Chavez</h1>
+    <p class="lede">
+      Aviation Engineering Technology student with <strong>420 supervised helicopter maintenance hours</strong>
+      under the Philippine Air Force. I build <strong>self-hosted systems that keep maintenance and
+      operational records accurate, auditable, and on schedule.</strong>
+    </p>
+    <div class="cta">
+      <a class="btn btn-p" href="#projects">View my work</a>
+      <a class="btn btn-s" href="cv/CV_Aesen_Chavez_Hybrid.pdf" download>Download CV (PDF)</a>
+    </div>
+    <div class="hero-meta">
+      <span><i class="dot"></i>Muntinlupa City, Metro Manila</span>
+      <span><i class="dot"></i>Open to MRO systems &amp; technical records roles</span>
+      <span><i class="dot"></i>English (fluent) &middot; Filipino (native)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>420</b><span>Supervised aircraft maintenance hours (OJT)</span></div>
+    <div class="stat"><b>2</b><span>Helicopter types worked on: Bell 412EP, UH-1H</span></div>
+    <div class="stat"><b>1</b><span>Live automation system in production</span></div>
+    <div class="stat"><b>5</b><span>Certifications &amp; licenses in progress</span></div>
+  </div>
+</div>
+
+<!-- ============ BRIDGE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Why me</span>
+      <h2>Two disciplines that rarely meet</h2>
+      <p>Most aviation graduates can read a maintenance manual but cannot script an automation.
+         Most IT graduates can build an automation but have never set foot in a hangar.
+         I have done both — and that intersection is exactly where MRO digitalisation is heading.</p>
+    </div>
+    <div class="bridge">
+      <div class="bridge-col">
+        <h3>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#d97b21" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          Aviation Maintenance
+        </h3>
+        <div class="sub">Philippine Air Force — 207th Tactical Helicopter Squadron</div>
+        <ul>
+          <li>420 hours of supervised maintenance on Bell 412EP and UH-1H airframes</li>
+          <li>Assisted in 600-hour inspections, preventive maintenance, and component installation</li>
+          <li>Engine ground runs, towing and tie-down, refuelling operations</li>
+          <li>Tool control, FOD prevention, and technical manual reading as daily standard</li>
+          <li>Maintenance documentation in a live military airbase environment</li>
+        </ul>
+      </div>
+      <div class="bridge-mid"><span>+</span></div>
+      <div class="bridge-col">
+        <h3>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2f80c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Systems &amp; Automation
+        </h3>
+        <div class="sub">Self-taught — self-hosted, production, not classroom</div>
+        <ul>
+          <li>Linux (Debian) administration, CLI troubleshooting, backups</li>
+          <li>Docker containers running self-hosted services</li>
+          <li>n8n workflow automation with HTTP webhooks and REST API integration</li>
+          <li>Baserow CRM — schema design, relationships, data management</li>
+          <li>Currently building an inspection compliance tracker with automated due-date alerting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <b>Why this matters to an MRO:</b> maintenance records failures are rarely mechanical —
+      they are record-keeping failures. Due dates missed because they lived in a paper binder,
+      edits with no audit trail, hours-tracking done by hand. That is a solvable software problem,
+      and it is the problem I am building against.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" style="background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Projects</span>
+      <h2>What I have actually built</h2>
+      <p>Not coursework. Deployed systems — one already running a real business, one in active development.</p>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="card">
+      <div class="card-top">
+        <h3>Booking &amp; Lead-Capture Automation</h3>
+        <span class="when">Jun 2026 – Present</span>
+      </div>
+      <div style="font-size:13.6px;color:var(--muted);margin-bottom:10px">
+        Britt's Zen Home Service Massage &middot; Solo build &amp; ongoing operation
+      </div>
+      <span class="tag tag-tech">Google Forms</span>
+      <span class="tag tag-tech">Google Sheets</span>
+      <span class="tag tag-tech">n8n</span>
+      <span class="tag tag-tech">Baserow CRM (self-hosted)</span>
+      <span class="tag tag-tech">Docker</span>
+      <span class="tag tag-tech">Debian Linux</span>
+      <div class="desc">
+        A service business was taking bookings through chat messages and writing them down by hand.
+        I replaced that with an end-to-end pipeline: a public booking form feeds a spreadsheet,
+        an n8n workflow routes each lead into a self-hosted CRM, and follow-ups are tracked
+        automatically until the booking is confirmed.
+      </div>
+      <ul class="bullets">
+        <li><b>Designed the workflow</b> — form submission → validation → CRM record creation → follow-up scheduling, with no manual copy-paste between steps.</li>
+        <li><b>Deployed the stack myself</b> on a Debian Linux host: Docker containers for n8n and Baserow, with backups and day-to-day troubleshooting.</li>
+        <li><b>Owned the data</b> — booking records, follow-up status, and client history now live in one structured place instead of scattered messages.</li>
+        <li><b>Improved the front end of the funnel</b> — updated the Facebook Page and published a shareable public booking link.</li>
+      </ul>
+      <div class="shots">
+        <div class="shot"><span><b>n8n workflow canvas</b><br>[ insert screenshot: nodes from form trigger to CRM write ]</span></div>
+        <div class="shot"><span><b>Baserow bookings table</b><br>[ insert screenshot: fields + a few blurred rows ]</span></div>
+      </div>
+      <div class="note" style="background:#fff">
+        <b>Replace these two frames with real screenshots.</b> Blur client names, phone numbers,
+        and any addresses first. A recruiter believes a screenshot far more than a bullet point —
+        this is the single highest-value thing you can add to this page.
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card">
+      <div class="card-top">
+        <h3>Aircraft Maintenance Log &amp; Compliance Tracker</h3>
+        <span class="when">2026 – Present</span>
+      </div>
+      <div style="font-size:13.6px;color:var(--muted);margin-bottom:10px">
+        Capstone project &middot; In development &middot; 100% synthetic data
+      </div>
+      <span class="tag tag-dev">In development</span>
+      <span class="tag tag-tech">Baserow</span>
+      <span class="tag tag-tech">n8n</span>
+      <span class="tag tag-tech">Docker</span>
+      <span class="tag tag-tech">Debian Linux</span>
+      <div class="desc">
+        Born directly from my OJT: I watched maintenance due dates get tracked on paper and in
+        spreadsheets, where a missed entry can mean an unairworthy aircraft flying. This project
+        turns that into a self-hosted system with automated alerting and a tamper-evident history.
+      </div>
+      <ul class="bullets">
+        <li><b>Dual-unit due-date logic</b> — inspections triggered by calendar days <i>or</i> accumulated flight hours, whichever comes first. This is the part paper systems handle worst.</li>
+        <li><b>Immutable audit trail</b> — every edit logs who changed what, when, and what the previous value was. Records cannot be silently altered.</li>
+        <li><b>Full record structure</b> — aircraft, components, inspection types, inspection records, technicians, and findings, with relationships between them.</li>
+        <li><b>Automated alerting</b> — n8n workflows escalate approaching and overdue inspections before they become a finding.</li>
+      </ul>
+      <div class="note" style="background:#fff">
+        <b>Honest status:</b> this is in active development, not finished. Everything shown is
+        built with synthetic data — no real PAF, operator, or client data is ever used.
+        I would rather show you a working prototype than claim a finished product.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Background</span>
+      <h2>Where the discipline came from</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item done">
+        <div class="tl-when">Jun – Aug 2026</div>
+        <h4>Aircraft Maintenance Trainee (OJT) — Philippine Air Force</h4>
+        <p>207th Tactical Helicopter Squadron, Col. Jesus Villamor Air Base, Pasay City.
+           420 supervised hours on Bell 412EP and UH-1H helicopters: 600-hour inspections,
+           preventive maintenance, component installation, engine ground runs, towing and tie-down,
+           refuelling. Worked to aviation safety standards daily — tool control, FOD prevention,
+           technical manual reading, maintenance documentation.</p>
+      </div>
+      <div class="tl-item done">
+        <div class="tl-when">2023 – Present</div>
+        <h4>BS Aviation Engineering Technology — Sapphire International Aviation Academy</h4>
+        <p>Parañaque City. Currently at 4th year level. Coursework in aircraft maintenance practices,
+           aviation safety and regulations, and aircraft structures and systems.</p>
+      </div>
+      <div class="tl-item done">
+        <div class="tl-when">2022 – 2023</div>
+        <h4>President — Adjutores Christi Campus Ministry</h4>
+        <p>Led campus outreach programs and events end-to-end, coordinating logistics, volunteers,
+           and task assignments.</p>
+      </div>
+      <div class="tl-item done">
+        <div class="tl-when">Feb – Mar 2023</div>
+        <h4>Office Assistant Intern — Mano Amiga Academy</h4>
+        <p>Guidance Department, Parañaque City. Front-desk point of contact for students, staff,
+           and visitors; maintained records, filing systems, and reports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section style="background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Capabilities</span>
+      <h2>What I can do on day one</h2>
+    </div>
+    <div class="sk-grid">
+      <div class="sk-col">
+        <h3>Systems &amp; Automation</h3>
+        <div class="sk-row"><b>Operating systems</b><span>Linux (Debian) administration, CLI troubleshooting, service management, backups</span></div>
+        <div class="sk-row"><b>Containers</b><span>Docker — deploying, updating, and troubleshooting self-hosted services</span></div>
+        <div class="sk-row"><b>Automation</b><span>n8n workflow design, HTTP webhooks, REST API integration, scheduled triggers</span></div>
+        <div class="sk-row"><b>Data platforms</b><span>Baserow (self-hosted) — schema design, relationships, data hygiene; Google Sheets</span></div>
+        <div class="sk-row"><b>Documentation</b><span>Google Workspace, Microsoft Word and Excel, technical and compliance documentation</span></div>
+      </div>
+      <div class="sk-col">
+        <h3>Aviation &amp; Safety</h3>
+        <div class="sk-row"><b>Aircraft platforms</b><span>Bell 412EP, UH-1H — maintenance support under supervision</span></div>
+        <div class="sk-row"><b>Maintenance tasks</b><span>600-hour inspections, preventive maintenance, component installation, ground handling and towing assist</span></div>
+        <div class="sk-row"><b>Safety discipline</b><span>Tool control, FOD prevention, technical manual reading, procedure adherence</span></div>
+        <div class="sk-row"><b>Records</b><span>Maintenance documentation, audit trail discipline, attention to accuracy under procedure</span></div>
+        <div class="sk-row"><b>Work reliability</b><span>Shifting schedules including nights, weekends, and holidays</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Roadmap</span>
+      <h2>Currently in progress</h2>
+      <p>Published openly because a target date is a commitment, not a claim.
+         Every item below is dated — check back and hold me to it.</p>
+    </div>
+    <div class="rm">
+      <div class="rm-row">
+        <div class="when">Nov 2026</div>
+        <div class="what">Linux Essentials <small>Cisco Networking Academy</small></div>
+        <span class="pill pill-free">Free</span>
+      </div>
+      <div class="rm-row">
+        <div class="when">Dec 2026</div>
+        <div class="what">Azure Fundamentals (AZ-900) <small>Microsoft</small></div>
+        <span class="pill pill-paid">Target</span>
+      </div>
+      <div class="rm-row">
+        <div class="when">Mar 2027</div>
+        <div class="what">CompTIA Network+ <small>Network infrastructure and troubleshooting</small></div>
+        <span class="pill pill-paid">Target</span>
+      </div>
+      <div class="rm-row">
+        <div class="when">Jul 2027</div>
+        <div class="what">CompTIA Security+ <small>Security and compliance fundamentals</small></div>
+        <span class="pill pill-paid">Target</span>
+      </div>
+      <div class="rm-row">
+        <div class="when">Sep 2027</div>
+        <div class="what">CAAP AMT License <small>Aircraft Maintenance Technician — Civil Aviation Authority of the Philippines</small></div>
+        <span class="pill pill-paid">Target</span>
+      </div>
+    </div>
+    <div class="note">
+      Finished a certification? <b>Update this section the same day</b> — move it to a green
+      "Earned" row. A roadmap that never progresses hurts you more than having no roadmap at all.
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p>I am looking for entry-level roles in MRO systems, technical records, maintenance data,
+       and compliance automation — and I am open to conversations even when there is no
+       opening advertised.</p>
+    <div class="clist">
+      <a class="clink" href="mailto:aesenchavez18@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        aesenchavez18@gmail.com
+      </a>
+      <a class="clink" href="tel:+639472450023">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +63 947 245 0023
+      </a>
+      <a class="clink" href="https://linkedin.com/in/[YOUR-HANDLE]">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.75-1.95C20.6 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.05-3.3-2.05 0-2.37 1.57-2.37 3.2V21H9V9Z"/></svg>
+        LinkedIn
+      </a>
+      <a class="clink" href="cv/CV_Aesen_Chavez_Hybrid.pdf" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Aesen A. Chavez &middot; Muntinlupa City, Philippines</span>
+    <span>Built and hosted by me &mdash; on Debian Linux, with Docker.</span>
+  </div>
+</footer>
+
+</body>
+</html>
