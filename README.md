@@ -57,7 +57,7 @@ at the Philippine Air Force 207th Tactical Helicopter Squadron.
 - Email: aesenchavez18@gmail.com
 - Mobile: +63 947 245 0023
 - Location: Muntinlupa City, Metro Manila, Philippines
-- LinkedIn: [linkedin.com/in/YOUR-HANDLE](https://linkedin.com/in/YOUR-HANDLE)
+- LinkedIn: [linkedin.com/in/aesen-chavez-870b26343](https://www.linkedin.com/in/aesen-chavez-870b26343/)
 
 ---
 

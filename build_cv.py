@@ -23,7 +23,7 @@ OUT = "/home/user/portfolio/cv"
 NAME = "AESEN A. CHAVEZ"
 TAGLINE = "Aviation Maintenance Trainee  |  Maintenance Data & Compliance Automation"
 CONTACT = "Muntinlupa City, Metro Manila  |  +63 947 245 0023  |  aesenchavez18@gmail.com"
-LINKS = "linkedin.com/in/Aeseeen  |  aeseeen.github.io"
+LINKS = "linkedin.com/in/aesen-chavez-870b26343  |  aeseeen.github.io"
 
 SUMMARY = (
     "BS Aviation Engineering Technology student with 420 supervised helicopter maintenance hours under "
